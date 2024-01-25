@@ -5,7 +5,7 @@ using System.IO;
 using Microsoft.Extensions.Logging;
 namespace DeviceDetectorNET.Cache
 {
-    internal class ParseCache : IParseCache
+    public class ParseCache : IParseCache
     {
         private ParseCache()
         {
@@ -81,6 +81,18 @@ namespace DeviceDetectorNET.Cache
             };
 
             ParsedDataCollection.Upsert(cachedData);
+        }
+
+        public void Dispose()
+        {
+            try
+            {
+                _cacheDatabase.Dispose();
+            }
+            catch (Exception exception)
+            {
+                Logger?.LogWarning("Unable to dispose due to {0}", exception);
+            }
         }
 
         private void EmptyExpired()

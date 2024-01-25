@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;Net462;net5.0;net6.0;net7.0;net8.0</TargetFrameworks>
     <RootNamespace>DeviceDetectorNET</RootNamespace>
-    <Version>6.2.0</Version>
+    <Version>6.2.1</Version>
     <Authors>totpero</Authors>
     <PackageLicenseExpression></PackageLicenseExpression>
     <Copyright>Copyright © www.totpe.ro</Copyright>
@@ -12,12 +12,15 @@
     <PackageProjectUrl>https://github.com/totpero/DeviceDetector.NET</PackageProjectUrl>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <AssemblyVersion>6.2.0.0</AssemblyVersion>
+    <AssemblyVersion>6.2.1.0</AssemblyVersion>
     <RepositoryUrl>https://github.com/totpero/DeviceDetector.NET</RepositoryUrl>
     <SignAssembly>false</SignAssembly>
-    <FileVersion>6.2.0.0</FileVersion>
+    <FileVersion>6.2.1.0</FileVersion>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageReleaseNotes>### What's Changed:
+
+### V6.2.1:
+-  Expose Dispose() in ParseCache to free db handle
 
 ### V6.2.0:
 - Detect device new brands: A&amp;K, BASE, CKK Mobile, Matco Tools, Sparx and Detect devices for exist brands
